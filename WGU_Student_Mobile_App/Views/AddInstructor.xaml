@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             BackgroundColor ="White"
+             x:Class="WGU_Student_Mobile_App.Views.AddInstructor"
+             xmlns:viewmodels="clr-namespace:WGU_Student_Mobile_App.ViewModels" 
+             Shell.FlyoutBehavior="Disabled"
+             x:DataType="viewmodels:AddInstructorsViewModel"
+             >
+    <ContentPage.BindingContext>
+        <viewmodels:AddInstructorsViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Frame BackgroundColor="{StaticResource Primary}"
+               BorderColor="#002f51"
+               CornerRadius="15"
+               HasShadow="True"
+               Margin="20,150"
+               >
+
+            <StackLayout>
+
+                <Label
+                    Text="New Instructor"
+                    Style="{StaticResource SectionLabel}"
+                    TextColor="White"
+                    FontSize="35"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                <Entry
+                    Placeholder="New Instructor"
+                    Text="{Binding Name}"
+                    Style="{StaticResource Entry}"
+                    />
+
+                <Entry
+                    Placeholder="Phone"
+                    Text="{Binding Phone}"
+                    Style="{StaticResource Entry}"
+                    />
+
+                <Entry
+                    Placeholder="Email"
+                    Text="{Binding Email}"
+                    Style="{StaticResource Entry}"
+                    />
+
+                <Button 
+                    CornerRadius="15"
+                    WidthRequest="150"
+                    Margin="20"
+                    Text="Save"
+                    Command="{Binding SaveCommand}"
+                    IsEnabled="{Binding IsNotBusy}"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+
+</ContentPage>

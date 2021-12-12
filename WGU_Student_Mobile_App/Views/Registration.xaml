@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WGU_Student_Mobile_App.Views.Registration"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False">
+             
+                
+    <ContentPage.Content>
+        <Frame BackgroundColor="{StaticResource Primary}"
+               BorderColor="#002f51"
+               CornerRadius="15"
+               HasShadow="True"
+               Margin="20,150"
+               >
+
+            <StackLayout>
+
+                <Label
+                    Text="Registration"
+                    Style="{StaticResource SectionLabel}"
+                    TextColor="White"
+                    FontSize="35"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                <Entry 
+                    Placeholder="Username"
+                    Style="{StaticResource Entry}"
+                    />
+
+                <Entry 
+                    Placeholder="Email"
+                    Style="{StaticResource Entry}"
+                    />
+
+                <Entry 
+                    IsPassword="True"
+                    Placeholder="Password"
+                    Style="{StaticResource Entry}"
+                    />
+
+                <Entry
+                    Placeholder="Confirm Password"
+                    Style="{StaticResource Entry}"
+                    />
+
+                <Button 
+                    CornerRadius="15"
+                    WidthRequest="150"
+                    Margin="20"
+                    Text="Sign Up" Clicked="Button_Clicked"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

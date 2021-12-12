@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:WGU_Student_Mobile_App.ViewModels" 
+             xmlns:model="clr-namespace:WGU_Student_Mobile_App.Models"
+             x:DataType="viewmodels:NotesViewModel"
+             BackgroundColor ="White"
+             x:Class="WGU_Student_Mobile_App.Views.Notes"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Name="notes"
+             Title="Notes"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddCommand}" Text="Add" />
+        <ToolbarItem Command="{Binding DetailsCommand}" Text="Details" />
+        <ToolbarItem Command="{Binding EditCommand}" Text="Edit" />
+        <ToolbarItem Command="{Binding DeleteCommand}" Text="Delete" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:ItemSelectedEventArgsConverter x:Key="ItemSelectedEventArgsConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <viewmodels:NotesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ListView BackgroundColor="White"
+              HasUnevenRows="True"
+              ItemsSource="{Binding NoteCollection}"
+              IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+              RefreshCommand="{Binding RefreshCommand}"
+              IsPullToRefreshEnabled="True">
+
+        <ListView.Behaviors>
+            <xct:EventToCommandBehavior
+                EventName="ItemSelected"
+                Command="{Binding SelectedCommand}"                
+                EventArgsConverter="{StaticResource ItemSelectedEventArgsConverter}"/>
+        </ListView.Behaviors>
+
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="model:Note">
+                <ViewCell>
+                    <Grid Padding="20, 10">
+                        <Frame BackgroundColor="{StaticResource CardBackground}"
+                               HasShadow="True"
+                               BorderColor="{StaticResource Primary}"
+                               CornerRadius="15"
+                               >
+                            <Grid RowDefinitions="Auto, Auto, Auto"
+                                  ColumnDefinitions="Auto, Auto">
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    FontSize="Large"
+                                    TextColor= "{StaticResource SecondaryText}"
+                                    Text="{Binding Name}"/>
+
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    TextColor="{StaticResource SecondaryText}"
+                                    Text="{Binding CreatedDate, StringFormat='{0:d}'}"/>
+
+                                <Label
+                                    Grid.Column="0"
+                                    Grid.Row="2"
+                                    TextColor="{StaticResource SecondaryText}"
+                                    Text="{Binding Description}"/>
+
+
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

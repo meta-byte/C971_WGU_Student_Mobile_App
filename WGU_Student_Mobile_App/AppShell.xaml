@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:WGU_Student_Mobile_App.Views"
+       Title="WGU_Student_Mobile_App"
+       x:Class="WGU_Student_Mobile_App.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Background}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+
+            <!--
+            Default Styles for all Flyout Items
+            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
+            -->
+            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <!--
+            Custom Style you can apply to any Flyout Item
+            -->
+            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+
+    <!--
+    Login / Registration / Home
+    -->
+
+    <ShellItem Route="Login" FlyoutItemIsVisible="False">
+        <ShellContent Route="Login" ContentTemplate="{DataTemplate local:Login}" />
+    </ShellItem>
+
+    <ShellItem Route="Registration" FlyoutItemIsVisible="False">
+        <ShellContent Route="Registration" ContentTemplate="{DataTemplate local:Registration}"/>
+    </ShellItem>
+
+    <FlyoutItem Title="Home" FlyoutItemIsVisible="False">
+        <ShellContent Route="Home" ContentTemplate="{DataTemplate local:Home}"/>
+    </FlyoutItem>
+
+    <!--
+    Terms
+    -->
+
+    <FlyoutItem Title="Terms">
+        <ShellContent Route="Terms" ContentTemplate="{DataTemplate local:Terms}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="TermDetails" FlyoutItemIsVisible="False">
+        <ShellContent Route="TermDetails" ContentTemplate="{DataTemplate local:TermDetails}" />
+    </FlyoutItem>
+
+    <ShellItem Route="AddTerm" FlyoutItemIsVisible="False">
+        <ShellContent  Route="AddTerm" ContentTemplate="{DataTemplate local:AddTerm}"/>
+    </ShellItem>
+
+    <ShellItem Route="EditTerm" FlyoutItemIsVisible="False">
+        <ShellContent  Route="EditTerm" ContentTemplate="{DataTemplate local:EditTerm}"/>
+    </ShellItem>
+
+    <!--
+    Courses
+    -->
+
+    <FlyoutItem Title="Courses">
+        <ShellContent Route="Courses" ContentTemplate="{DataTemplate local:Courses}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="CourseDetails" FlyoutItemIsVisible="False">
+        <ShellContent Route="CourseDetails" ContentTemplate="{DataTemplate local:CourseDetails}" />
+    </FlyoutItem>
+
+    <ShellItem Route="AddCourse" FlyoutItemIsVisible="False">
+        <ShellContent  Route="AddCourse" ContentTemplate="{DataTemplate local:AddCourse}"/>
+    </ShellItem>
+
+    <ShellItem Route="EditCourse" FlyoutItemIsVisible="False">
+        <ShellContent  Route="EditCourse" ContentTemplate="{DataTemplate local:EditCourse}"/>
+    </ShellItem>
+
+    <!--
+    Assessments
+    -->
+
+    <FlyoutItem Title="Assessments">
+        <ShellContent Route="Assessments" ContentTemplate="{DataTemplate local:Assessments}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="AssessmentDetails" FlyoutItemIsVisible="False">
+        <ShellContent Route="AssessmentDetails" ContentTemplate="{DataTemplate local:AssessmentDetails}" />
+    </FlyoutItem>
+
+    <ShellItem Route="AddAssessment" FlyoutItemIsVisible="False">
+        <ShellContent  Route="AddAssessment" ContentTemplate="{DataTemplate local:AddAssessment}"/>
+    </ShellItem>
+
+    <ShellItem Route="EditAssessment" FlyoutItemIsVisible="False">
+        <ShellContent  Route="EditAssessment" ContentTemplate="{DataTemplate local:EditAssessment}"/>
+    </ShellItem>
+    
+    <!--
+    Notes
+    -->
+
+    <FlyoutItem Title="Notes">
+        <ShellContent Route="Notes" ContentTemplate="{DataTemplate local:Notes}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="NoteDetails" FlyoutItemIsVisible="False">
+        <ShellContent Route="NoteDetails" ContentTemplate="{DataTemplate local:NoteDetails}" />
+    </FlyoutItem>
+
+    <ShellItem Route="AddNote" FlyoutItemIsVisible="False">
+        <ShellContent  Route="AddNote" ContentTemplate="{DataTemplate local:AddNote}"/>
+    </ShellItem>
+
+    <ShellItem Route="EditNote" FlyoutItemIsVisible="False">
+        <ShellContent  Route="EditNote" ContentTemplate="{DataTemplate local:EditNote}"/>
+    </ShellItem>
+
+    <!--
+    Instructors
+    -->
+
+    <FlyoutItem Title="Instructors">
+        <ShellContent Route="Instructors" ContentTemplate="{DataTemplate local:Instructors}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="InstructorDetails" FlyoutItemIsVisible="False">
+        <ShellContent Route="InstructorDetails" ContentTemplate="{DataTemplate local:InstructorDetails}" />
+    </FlyoutItem>
+
+    <ShellItem Route="AddInstructor" FlyoutItemIsVisible="False">
+        <ShellContent  Route="AddInstructor" ContentTemplate="{DataTemplate local:AddInstructor}"/>
+    </ShellItem>
+
+    <ShellItem Route="EditInstructor" FlyoutItemIsVisible="False">
+        <ShellContent  Route="EditInstructor" ContentTemplate="{DataTemplate local:EditInstructor}"/>
+    </ShellItem>
+
+</Shell>

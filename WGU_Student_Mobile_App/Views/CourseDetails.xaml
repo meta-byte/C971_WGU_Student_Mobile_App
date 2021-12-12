@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:model="clr-namespace:WGU_Student_Mobile_App.Models"
+             BackgroundColor ="White"
+             x:Class="WGU_Student_Mobile_App.Views.CourseDetails"
+             Title="{Binding Name}"
+             x:DataType="model:CourseDetailsModel"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding Name}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding TermName}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding StartDate, StringFormat='{0:d}'}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding EndDate, StringFormat='{0:d}'}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding InstructorName}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding CourseStatus}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="Assessments"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <ListView BackgroundColor="White"
+                HasUnevenRows="True"
+                ItemsSource="{Binding Assessments}">
+              
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Assessment">
+                        <ViewCell>
+                            <Grid Padding="20, 10">
+                                <Frame BackgroundColor="{StaticResource CardBackground}"
+                               HasShadow="True"
+                               BorderColor="{StaticResource Primary}"
+                               CornerRadius="15"
+                               >
+                                    <Grid RowDefinitions="Auto, Auto, Auto"
+                                  ColumnDefinitions="Auto, Auto">
+                                        <Label
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    FontSize="Large"
+                                    TextColor= "{StaticResource SecondaryText}"
+                                    Text="{Binding Name}"/>
+
+                                        <Label
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    TextColor="{StaticResource SecondaryText}"
+                                    Text="Starts:"/>
+
+                                        <Label
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    TextColor="{StaticResource SecondaryText}"
+                                    Text="{Binding StartDate, StringFormat='{0:d}'}"/>
+
+                                        <Label
+                                    Grid.Column="0"
+                                    Grid.Row="2"
+                                    TextColor="{StaticResource SecondaryText}"
+                                    Text="Ends: "/>
+
+                                        <Label
+                                    Grid.Column="1"
+                                    Grid.Row="2"
+                                    TextColor="{StaticResource SecondaryText}"
+                                    Text="{Binding EndDate, StringFormat='{0:d}'}"/>
+
+
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="Notes"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <ListView BackgroundColor="White"
+                HasUnevenRows="True"
+                ItemsSource="{Binding Notes}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Note">
+                        <ViewCell>
+                            <Grid Padding="20, 10">
+                                <Frame BackgroundColor="{StaticResource CardBackground}"
+                               HasShadow="True"
+                               BorderColor="{StaticResource Primary}"
+                               CornerRadius="15"
+                               >
+                                    <Grid RowDefinitions="Auto, Auto, Auto"
+                                  ColumnDefinitions="Auto, Auto">
+                                        <Label
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    FontSize="Large"
+                                    TextColor= "{StaticResource SecondaryText}"
+                                    Text="{Binding Name}"/>
+
+                                        <Label
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    TextColor="{StaticResource SecondaryText}"
+                                    Text="Description:"/>
+
+                                        <Label
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    TextColor="{StaticResource SecondaryText}"
+                                    Text="{Binding Description}"/>
+
+
+
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WGU_Student_Mobile_App.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--
+             Application Colors
+            -->
+            <Color x:Key="Background">#e9e6d9</Color>
+            <Color x:Key="CardBackground">#82bcd4</Color>
+            <Color x:Key="Primary">#4486a1</Color>
+
+            <!--
+             Text Colors
+            -->
+            <Color x:Key="SecondaryText">white</Color>
+            <Color x:Key="PrimaryText">#002f51</Color>
+
+            <Style x:Key= "SectionLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Padding" Value="20"/>
+            </Style>
+
+            <Style x:Key= "Entry" TargetType="Entry">
+                <Setter Property="TextColor" Value="white"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0, 5"/>
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

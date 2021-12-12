@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             BackgroundColor ="White"
+             x:Class="WGU_Student_Mobile_App.Views.AddNote"
+             xmlns:viewmodels="clr-namespace:WGU_Student_Mobile_App.ViewModels" 
+             Shell.FlyoutBehavior="Disabled"
+             x:DataType="viewmodels:AddNotesViewModel"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             >
+
+    <ContentPage.BindingContext>
+        <viewmodels:AddNotesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior
+                EventName="Appearing"
+                Command="{Binding GetCommand}"                
+                />
+    </ContentPage.Behaviors>
+
+    <ContentPage.Content>
+        <Frame BackgroundColor="{StaticResource Primary}"
+               BorderColor="#002f51"
+               CornerRadius="15"
+               HasShadow="True"
+               Margin="20,150"
+               >
+
+            <StackLayout>
+
+                <Label
+                    Text="New Note"
+                    Style="{StaticResource SectionLabel}"
+                    TextColor="White"
+                    FontSize="35"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                <Entry
+                    Placeholder="Note Title"
+                    Text="{Binding Name}"
+                    Style="{StaticResource Entry}"
+                    />
+
+                <Picker
+                    Style="{StaticResource Entry}"
+                    Title="Select Course"
+                    TitleColor="White"
+                    ItemsSource="{Binding CourseCollection}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedIndex="{Binding CourseId}">
+                </Picker>
+
+                <Editor 
+                    Text="{Binding Description}"
+                    Style="{StaticResource Entry}"
+                    Placeholder="Write note here!"
+                    AutoSize="TextChanges"
+                    />
+
+                <Button 
+                    CornerRadius="15"
+                    WidthRequest="150"
+                    Margin="20"
+                    Text="Save"
+                    Command="{Binding SaveCommand}"
+                    IsEnabled="{Binding IsNotBusy}"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:model="clr-namespace:WGU_Student_Mobile_App.Models"
+             BackgroundColor ="White"
+             x:Class="WGU_Student_Mobile_App.Views.AssessmentDetails"
+             Title="{Binding Name}"
+             x:DataType="model:AssessmentDetailsModel"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding Name}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding StartDate}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding EndDate}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding CourseName}"
+                Style="{StaticResource SectionLabel}"
+                />
+
+            <Label
+                HorizontalOptions= "StartAndExpand"
+                Text="{Binding AssessmentType}"
+                Style="{StaticResource SectionLabel}"
+                />
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
