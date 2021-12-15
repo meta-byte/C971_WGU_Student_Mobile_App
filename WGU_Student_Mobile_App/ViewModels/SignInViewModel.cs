@@ -36,22 +36,22 @@ namespace WGU_Student_Mobile_App.ViewModels
 
         async Task Login()
         {
-            //if (string.IsNullOrWhiteSpace(username))
-            //{
-            //    return;
-            //}
-            //if (string.IsNullOrWhiteSpace(password))
-            //{
-            //    return;
-            //}
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(password))
+            {
+                return;
+            }
 
-            //int userId = userService.SignIn(username, password);
+            int userId = userService.SignIn(username, password);
 
-            //if (userId == 0)
-            //{
-            //    await Application.Current.MainPage.DisplayAlert("Invalid Login", "Login Attempt Failed", "OK");
-            //    return;
-            //}
+            if (userId == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Invalid Login", "Login Attempt Failed", "OK");
+                return;
+            }
             userService = DependencyService.Get<IUserService>();
 
             await Shell.Current.GoToAsync($"//{nameof(Terms)}");
