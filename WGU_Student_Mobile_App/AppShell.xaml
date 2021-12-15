@@ -89,6 +89,10 @@
     <FlyoutItem Title="Home" FlyoutItemIsVisible="False">
         <ShellContent Route="Home" ContentTemplate="{DataTemplate local:Home}"/>
     </FlyoutItem>
+    
+    <FlyoutItem Title="Search" >
+        <ShellContent Route="Search" ContentTemplate="{DataTemplate local:Search}"/>
+    </FlyoutItem>
 
     <!--
     Terms

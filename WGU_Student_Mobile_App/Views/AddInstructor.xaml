@@ -6,6 +6,7 @@
              xmlns:viewmodels="clr-namespace:WGU_Student_Mobile_App.ViewModels" 
              Shell.FlyoutBehavior="Disabled"
              x:DataType="viewmodels:AddInstructorsViewModel"
+             xmlns:xct ="http://xamarin.com/schemas/2020/toolkit"
              >
     <ContentPage.BindingContext>
         <viewmodels:AddInstructorsViewModel/>
@@ -31,22 +32,29 @@
                     />
 
                 <Entry
-                    Placeholder="New Instructor"
+                    Placeholder="Name"
                     Text="{Binding Name}"
                     Style="{StaticResource Entry}"
                     />
 
                 <Entry
-                    Placeholder="Phone"
+                    Placeholder="555-555-5555"
                     Text="{Binding Phone}"
-                    Style="{StaticResource Entry}"
-                    />
+                    Style="{StaticResource Entry}">
+                    <Entry.Behaviors>
+                        <xct:TextValidationBehavior MaximumLength="12" RegexPattern="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"  InvalidStyle="{StaticResource InvalidStyle}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Entry
-                    Placeholder="Email"
+                    Placeholder="email@email.com"
                     Text="{Binding Email}"
-                    Style="{StaticResource Entry}"
-                    />
+                    Style="{StaticResource Entry}">
+                    <Entry.Behaviors>
+                        <xct:EmailValidationBehavior InvalidStyle="{StaticResource InvalidStyle}"/>
+                    </Entry.Behaviors>
+
+                </Entry>
 
                 <Button 
                     CornerRadius="15"

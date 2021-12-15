@@ -26,10 +26,13 @@
                 <Setter Property="Padding" Value="20"/>
             </Style>
 
+            <Style x:Key="InvalidStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="Red"/>
+            </Style>
+
             <Style x:Key= "Entry" TargetType="Entry">
                 <Setter Property="TextColor" Value="white"/>
                 <Setter Property="FontSize" Value="Medium"/>
-                <Setter Property="PlaceholderColor" Value="White"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="Margin" Value="0, 5"/>
             </Style>

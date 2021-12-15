@@ -118,6 +118,12 @@ namespace WGU_Student_Mobile_App.ViewModels
             if (course == null)
                 return;
 
+            var result = await Application.Current.MainPage.DisplayAlert("Confirm Delete", "Are you sure you wish to delete this item", "OK", "Cancel");
+            if (!result)
+            {
+                return;
+            }
+
             courseService.DeleteCourse(course.Id);
             await Refresh();
         }

@@ -106,6 +106,12 @@ namespace WGU_Student_Mobile_App.ViewModels
                 return;
             }
 
+            var result = await Application.Current.MainPage.DisplayAlert("Confirm Delete", "Are you sure you wish to delete this item", "OK", "Cancel");
+            if (!result)
+            {
+                return;
+            }
+
             var route = $"{nameof(AssessmentDetails)}?AssessmentId={assessment.Id}";
             await Shell.Current.GoToAsync(route);
         }

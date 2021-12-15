@@ -20,6 +20,8 @@ namespace WGU_Student_Mobile_App
             Routing.RegisterRoute(nameof(Registration),
                 typeof(Registration));
 
+            Routing.RegisterRoute(nameof(Search),
+                typeof(Search));
 
             //Terms
             Routing.RegisterRoute(nameof(Terms),

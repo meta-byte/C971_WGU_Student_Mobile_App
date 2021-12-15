@@ -44,16 +44,23 @@
                     />
 
                 <Entry
-                    Placeholder="Phone"
+                    Placeholder="555-555-5555"
                     Text="{Binding Phone}"
-                    Style="{StaticResource Entry}"
-                    />
+                    Style="{StaticResource Entry}">
+                    <Entry.Behaviors>
+                        <xct:TextValidationBehavior MaximumLength="12" RegexPattern="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"  InvalidStyle="{StaticResource InvalidStyle}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Entry
                     Placeholder="Email"
                     Text="{Binding Email}"
-                    Style="{StaticResource Entry}"
-                    />
+                    Style="{StaticResource Entry}">
+                    <Entry.Behaviors>
+                        <xct:EmailValidationBehavior InvalidStyle="{StaticResource InvalidStyle}"/>
+                    </Entry.Behaviors>
+
+                </Entry>
 
                 <Button 
                     CornerRadius="15"

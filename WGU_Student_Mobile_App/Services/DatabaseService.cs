@@ -18,6 +18,7 @@ namespace WGU_Student_Mobile_App.Services
 
         public SQLiteConnection InitializeDatabase()
         {
+            
             string databasePath = Path.Combine(FileSystem.AppDataDirectory, "MyData.db");
             bool createDbFile = !File.Exists(databasePath);
             if (createDbFile)
@@ -45,6 +46,7 @@ namespace WGU_Student_Mobile_App.Services
             db.Execute(DropCourseTables);
             db.Execute(DropAssessmentTables);
             db.Execute(DropNoteTables);
+            db.Execute(DropUserTables);
         }
 
         public void CreateAllTables()
@@ -54,6 +56,7 @@ namespace WGU_Student_Mobile_App.Services
             db.Execute(CreateCourseTable);
             db.Execute(CreateAssessmentTable);
             db.Execute(CreateNoteTable);
+            db.Execute(CreateUserTable);
         }
 
         public void PopulateAllTables()
@@ -63,6 +66,7 @@ namespace WGU_Student_Mobile_App.Services
             PopulateAssessments();
             PopulateInstructors();
             PopulateNotes();
+            PopulateUsers();
         }
 
         public void PopulateTerms()
@@ -205,16 +209,29 @@ namespace WGU_Student_Mobile_App.Services
             });
         }
 
+        public void PopulateUsers()
+        {
+            db.Insert(new User
+            {
+                Username = "test",
+                Email = "test@test.com",
+                Password = "test",
+            });
+        }
+
         private const string DropTermTables = @"DROP TABLE IF EXISTS Term;";
         private const string DropInstructorTables = @"DROP TABLE IF EXISTS Instructor;";
         private const string DropCourseTables = @"DROP TABLE IF EXISTS Course;";
         private const string DropAssessmentTables = @"DROP TABLE IF EXISTS Assessment;";
         private const string DropNoteTables = @"DROP TABLE IF EXISTS Note;";
+        private const string DropUserTables = @"DROP TABLE IF EXISTS User;";
+
 
         private const string CreateTermTable = @"CREATE TABLE IF NOT EXISTS Term (Id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, StartDate DATETIME, EndDate DATETIME, HasNotified INTEGER)";
         private const string CreateInstructorTable = @"CREATE TABLE IF NOT EXISTS Instructor (Id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, PhoneNumber TEXT, Email TEXT)";
         private const string CreateCourseTable = @"CREATE TABLE IF NOT EXISTS Course (Id INTEGER PRIMARY KEY AUTOINCREMENT, TermId INTEGER, InstructorId INTEGER, Name TEXT, StartDate DATETIME, EndDate DATETIME, CourseStatus INTEGER, HasNotified INTEGER)";
         private const string CreateAssessmentTable = @"CREATE TABLE IF NOT EXISTS Assessment (Id INTEGER PRIMARY KEY AUTOINCREMENT, CourseId INTEGER, Name TEXT, StartDate DATETIME, EndDate DATETIME, AssessmentType INTEGER, HasNotified INTEGER)";
         private const string CreateNoteTable = @"CREATE TABLE IF NOT EXISTS Note (Id INTEGER PRIMARY KEY AUTOINCREMENT, CourseId INTEGER, Name TEXT, Description TEXT, CreatedDate DATETIME)";
+        private const string CreateUserTable = @"CREATE TABLE IF NOT EXISTS User (Id INTEGER PRIMARY KEY AUTOINCREMENT, Username TEXT, Email TEXT, Password TEXT)";
     }
 }

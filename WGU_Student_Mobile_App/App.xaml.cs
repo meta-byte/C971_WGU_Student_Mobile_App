@@ -17,11 +17,11 @@ namespace WGU_Student_Mobile_App
         protected override void OnStart()
         {
             SQLiteConnection db = new DatabaseService().InitializeDatabase();
+            DependencyService.RegisterSingleton<IUserService>(new UserService(db));
             DependencyService.RegisterSingleton<ICourseService>(new CourseService(db));
             DependencyService.RegisterSingleton<IAssessmentService>(new AssessmentService(db));
             DependencyService.RegisterSingleton<ITermService>(new TermService(db));
             DependencyService.RegisterSingleton<INoteService>(new NoteService(db));
-            DependencyService.RegisterSingleton<IInstructorService>(new InstructorService(db));
             DependencyService.RegisterSingleton<IInstructorService>(new InstructorService(db));
 
             NotificationService notification = new NotificationService();

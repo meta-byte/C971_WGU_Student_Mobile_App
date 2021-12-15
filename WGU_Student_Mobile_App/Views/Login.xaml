@@ -4,8 +4,19 @@
              x:Class="WGU_Student_Mobile_App.Views.Login"
              Shell.FlyoutBehavior="Disabled"
              Shell.NavBarIsVisible="False"
+             xmlns:viewmodels="clr-namespace:WGU_Student_Mobile_App.ViewModels" 
+             x:DataType="viewmodels:SignInViewModel"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              >
-              
+
+    <ContentPage.BindingContext>
+        <viewmodels:SignInViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior/>
+    </ContentPage.Behaviors>
+
     <ContentPage.Content>
 
         <Frame BackgroundColor="{StaticResource Primary}"
@@ -14,7 +25,7 @@
                HasShadow="True"
                Margin="20,150"
                >
-                
+
             <StackLayout>
 
                 <Label
@@ -30,8 +41,7 @@
                        Style="{StaticResource Entry}"
                        />
 
-                <Entry IsPassword="True"
-                       Placeholder="Password"
+                <Entry Placeholder="Password"
                        Style="{StaticResource Entry}"                       
                        />
 
@@ -39,7 +49,8 @@
                         CornerRadius="15"
                         WidthRequest="150"
                         Margin="20"
-                        Text="Login" Clicked="Button_Clicked"
+                        Text="Login"
+                        Command="{Binding LoginCommand}"
                         VerticalOptions="EndAndExpand"
                         HorizontalOptions="CenterAndExpand"/>
 
@@ -48,10 +59,10 @@
                        HorizontalOptions="CenterAndExpand"
                        Margin="0,15">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        <TapGestureRecognizer Command="{Binding RegisterCommand}"/>
                     </Label.GestureRecognizers>
                 </Label>
-                
+
             </StackLayout>
         </Frame>
     </ContentPage.Content>

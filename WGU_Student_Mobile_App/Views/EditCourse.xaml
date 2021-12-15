@@ -40,7 +40,7 @@
                     />
 
                 <Entry
-                    Placeholder="New Course"
+                    Placeholder="Title"
                     Text="{Binding Name}"
                     Style="{StaticResource Entry}"
                     />
@@ -48,7 +48,6 @@
                 <Picker
                     Style="{StaticResource Entry}"
                     Title="Select Term"
-                    TitleColor="White"
                     ItemsSource="{Binding TermCollection}"
                     ItemDisplayBinding="{Binding Name}"
                     SelectedIndex="{Binding TermID}">
@@ -69,7 +68,6 @@
                 <Picker
                     Style="{StaticResource Entry}"
                     Title="Select Instructor"
-                    TitleColor="White"
                     ItemsSource="{Binding InstructorCollection}"
                     ItemDisplayBinding="{Binding Name}"
                     SelectedIndex="{Binding InstructorId}">

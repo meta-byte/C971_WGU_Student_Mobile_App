@@ -113,10 +113,17 @@ namespace WGU_Student_Mobile_App.ViewModels
 
         async Task Delete(Note note)
         {
+
             note = SelectedNote.selectedNote;
 
             if (note == null)
                 return;
+
+           var result = await Application.Current.MainPage.DisplayAlert("Confirm Delete", "Are you sure you wish to delete this item", "OK", "Cancel");
+            if (!result)
+            {
+                return;
+            }
 
             noteService.DeleteNote(note.Id);
             await Refresh();
