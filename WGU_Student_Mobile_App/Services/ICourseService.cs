@@ -8,9 +8,10 @@ namespace WGU_Student_Mobile_App.Services
     {
         void AddCourse(int termId, string name, DateTime startDate, DateTime endDate, int instructorId, CourseStatuses status, bool hasNotified);
         void DeleteCourse(int Id);
-        void EditCourse(int termId, int Id, string name, DateTime startDate, DateTime endDate, int instructorId, CourseStatuses status, bool hasNotified);
+        void EditCourse(int termId, int id, string name, DateTime startDate, DateTime endDate, int instructorId, CourseStatuses status, bool hasNotified);
         Course GetCourse(int id);
         CourseDetailsModel GetCourseDetails(int id);
         List<Course> GetCourses();
+        List<Course> SearchCourses(string searchTerm);
     }
 }

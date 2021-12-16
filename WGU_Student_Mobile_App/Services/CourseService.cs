@@ -46,6 +46,13 @@ namespace WGU_Student_Mobile_App.Services
             db.Delete<Course>(Id);
         }
 
+        public List<Course> SearchCourses(string searchTerm)
+        {
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            SQLiteCommand cmd = db.CreateCommand(SearchCoursesQuery, "%" + searchTerm + "%", userId);
+            return cmd.ExecuteQuery<Course>();
+        }
+
         public List<Course> GetCourses()
         {
             int userId = DependencyService.Get<ILoggedInService>().Get();
@@ -81,6 +88,7 @@ namespace WGU_Student_Mobile_App.Services
         private const string GetAssessmentsByCourseID = @"SELECT * FROM Assessment where CourseId=? AND UserId=?;";
         private const string GetNotesByCourseID = @"SELECT * FROM Note where CourseId=? AND UserId=?;";
         private const string UpdateCourse = "UPDATE Course SET Name=?, TermId=?, InstructorId=?, StartDate=?, EndDate=?, CourseStatus=?, HasNotified=? WHERE Id=? AND UserId=?;";
+        private const string SearchCoursesQuery = "SELECT * FROM Course WHERE Name LIKE ? AND UserId=?;";
         private const string GetCourseDetailsQuery = @"
     SELECT 
         Course.Id as Id, 

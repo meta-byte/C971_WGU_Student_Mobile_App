@@ -61,6 +61,7 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\Views\NoteDetails.xaml.g.cs
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\Views\Notes.xaml.g.cs
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\Views\Registration.xaml.g.cs
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\Views\Search.xaml.g.cs
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\Views\TermDetails.xaml.g.cs
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\Views\Terms.xaml.g.cs
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\WGU_Student_Mobile_App.AssemblyInfoInputs.cache
@@ -70,5 +71,3 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\WGU_Student_Mobile_App.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\ref\WGU_Student_Mobile_App.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\WGU_Student_Mobile_App.pdb
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\Views\Search.xaml.g.cs
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\WGU_Student_Mobile_App.csproj.AssemblyReference.cache

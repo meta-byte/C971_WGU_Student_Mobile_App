@@ -18,6 +18,12 @@ namespace WGU_Student_Mobile_App.ViewModels
     class CoursesViewModel : BaseViewModel
     {
         public ObservableCollection<Course> CourseCollection { get; set; }
+        public ObservableCollection<Course> SearchCollection { get; set; }
+
+
+        string searchInput;
+
+        public string SearchInput { get => searchInput; set => SetProperty(ref searchInput, value); }
 
         public AsyncCommand RefreshCommand { get; }
         public AsyncCommand AddCommand { get; }
@@ -25,6 +31,9 @@ namespace WGU_Student_Mobile_App.ViewModels
         public AsyncCommand<Course> DeleteCommand { get; }
         public AsyncCommand<Course> SelectedCommand { get; }
         public AsyncCommand<Course> DetailsCommand { get; }
+        public AsyncCommand SearchCommand { get; }
+        public AsyncCommand RefreshSearchCommand { get; }
+
 
 
         ICourseService courseService;
@@ -32,14 +41,17 @@ namespace WGU_Student_Mobile_App.ViewModels
         {
             Title = "Courses";
             CourseCollection = new ObservableCollection<Course>();
+            SearchCollection = new ObservableCollection<Course>();
             Task.Run(async () => await Refresh());
 
             RefreshCommand = new AsyncCommand(Refresh);
+            RefreshSearchCommand = new AsyncCommand(RefreshSearch);
             AddCommand = new AsyncCommand(Add);
             DeleteCommand = new AsyncCommand<Course>(Delete);
             SelectedCommand = new AsyncCommand<Course>(Selected);
             DetailsCommand = new AsyncCommand<Course>(Details);
             EditCommand = new AsyncCommand<Course>(Edit);
+            SearchCommand = new AsyncCommand(Search);
 
             courseService = DependencyService.Get<ICourseService>();
 
@@ -64,6 +76,17 @@ namespace WGU_Student_Mobile_App.ViewModels
             IsBusy = false;
         }
 
+        async Task RefreshSearch()
+        {
+            IsBusy = true;
+
+            SearchCollection.Clear();
+
+            await Task.Delay(2000);
+
+            IsBusy = false;
+        }
+
         async Task Add()
         {
             var route = nameof(AddCourse);
@@ -82,6 +105,18 @@ namespace WGU_Student_Mobile_App.ViewModels
 
             var route = $"{nameof(EditCourse)}?CourseId={course.Id}";
             await Shell.Current.GoToAsync(route);
+
+        }
+
+        async Task Search()
+        {
+            SearchCollection.Clear();
+            IEnumerable<Course> courses = courseService.SearchCourses(searchInput);
+            foreach (var course in courses)
+            {
+                SearchCollection.Add(course);
+            }
+            await Task.Delay(500);
 
         }
 

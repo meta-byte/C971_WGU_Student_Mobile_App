@@ -679,10 +679,6 @@ C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Andr
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\655cd030-644e-4642-a571-8c3b6e8c0821.jar
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\e6f68d49-8835-4517-a61a-5f8694488329.cfg
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\build.props
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\adb.props
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\WGU_Student_Mobile_App.Android.csproj.AssemblyReference.cache
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\WGU_Student_Mobile_App.Android.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\WGU_Student_Mobile_App.Android.pdb
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\com.companyname.wgu_student_mobile_app.apk
@@ -692,6 +688,10 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\com.companyname.wgu_student_mobile_app-Signed.apk.idsig
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\WGU_Student_Mobile_App.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\WGU_Student_Mobile_App.pdb
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\build.props
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\adb.props
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\WGU_Student_Mobile_App.Android.csproj.AssemblyReference.cache
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\res.flag
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_AndroidXJetifyEmbeddedFiles.stamp
@@ -1357,5 +1357,6 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\3b775b99-3e57-4ba4-983b-251c802202a8.jar
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\e808fc81-884e-4903-8abb-75ae3fd389e6.cfg
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\c0de80f7-21e7-4d5d-a833-bf7eff865d00.jar
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\2d744d7b-0921-4c08-b69c-310b2f9a9787.cfg
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Plugin.LocalNotifications.pdb
