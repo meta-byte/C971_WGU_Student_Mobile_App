@@ -21,6 +21,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             Assessment assessment = new Assessment
             {
+                UserId = DependencyService.Get<ILoggedInService>().Get(),
                 CourseId = courseId,
                 Name = name,
                 StartDate = startDate,
@@ -45,20 +46,23 @@ namespace WGU_Student_Mobile_App.Services
 
         public List<Assessment> GetAssessments()
         {
-            return db.Table<Assessment>().ToList();
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            return db.Table<Assessment>().Where(a => a.UserId == userId).ToList();
         }
 
         public Assessment GetAssessment(int id)
         {
+            int userId = DependencyService.Get<ILoggedInService>().Get();
             var assessment = db.Table<Assessment>()
-                .FirstOrDefault(a => a.Id == id);
+                .FirstOrDefault(a => a.Id == id && a.UserId==userId);
 
             return assessment;
         }
 
         public AssessmentDetailsModel GetAssessmentDetails(int id)
         {
-            SQLiteCommand cmd = db.CreateCommand(GetAssessmentDetailsQuery, id);
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            SQLiteCommand cmd = db.CreateCommand(GetAssessmentDetailsQuery, id, userId);
             foreach (AssessmentDetailsModel ad in cmd.ExecuteQuery<AssessmentDetailsModel>())
             {
                 return ad;
@@ -80,7 +84,7 @@ namespace WGU_Student_Mobile_App.Services
     Assessment 
     JOIN Course 
         ON Assessment.CourseId=Course.Id
-    WHERE Assessment.Id=?;";
+    WHERE Assessment.Id=? AND UserId=?;";
     }
 }
 

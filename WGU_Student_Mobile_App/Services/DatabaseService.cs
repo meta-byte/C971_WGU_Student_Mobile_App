@@ -73,6 +73,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             db.Insert(new Term
             {
+                UserId = 1,
                 Name = "Term1",
                 StartDate = DateTime.Now,
                 EndDate = DateTime.Now.AddMonths(6),
@@ -81,6 +82,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Term
             {
+                UserId = 1,
                 Name = "Term2",
                 StartDate = DateTime.Now,
                 EndDate = DateTime.Now.AddMonths(6),
@@ -92,6 +94,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             db.Insert(new Assessment
             {
+                UserId = 1,
                 Name = "Ass1",
                 StartDate = DateTime.Now,
                 EndDate = DateTime.Now.AddDays(14),
@@ -102,6 +105,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Assessment
             {
+                UserId = 1,
                 Name = "Ass2",
                 StartDate = DateTime.Now,
                 EndDate = DateTime.Now.AddDays(14),
@@ -112,6 +116,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Assessment
             {
+                UserId = 1,
                 Name = "Ass3",
                 StartDate = DateTime.Now,
                 EndDate = DateTime.Now.AddDays(14),
@@ -122,6 +127,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Assessment
             {
+                UserId = 1,
                 Name = "Ass4",
                 StartDate = DateTime.Now,
                 EndDate = DateTime.Now.AddDays(14),
@@ -135,6 +141,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             db.Insert(new Note
             {
+                UserId = 1,
                 Name = "Note1",
                 Description = "Great",
                 CreatedDate = DateTime.Now,
@@ -143,6 +150,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Note
             {
+                UserId = 1,
                 Name = "Note2",
                 Description = "Great",
                 CreatedDate = DateTime.Now,
@@ -151,6 +159,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Note
             {
+                UserId = 1,
                 Name = "Note3",
                 Description = "Great",
                 CreatedDate = DateTime.Now,
@@ -159,6 +168,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Note
             {
+                UserId = 1,
                 Name = "Note4",
                 Description = "Great",
                 CreatedDate = DateTime.Now,
@@ -170,6 +180,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             db.Insert(new Instructor
             {
+                UserId = 1,
                 Name = "Garrett Howard",
                 PhoneNumber = "801-592-0371",
                 Email = "hylander.garrett@gmail.com"
@@ -177,6 +188,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Instructor
             {
+                UserId = 1,
                 Name = "Instructor2",
                 PhoneNumber = "801-999-9999",
                 Email = "whyme2@why.com"
@@ -188,6 +200,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             db.Insert(new Course
             {
+                UserId = 1,
                 Name = "Course1",
                 StartDate = DateTime.Now,
                 EndDate = DateTime.Now,
@@ -199,6 +212,7 @@ namespace WGU_Student_Mobile_App.Services
 
             db.Insert(new Course
             {
+                UserId = 1,
                 Name = "Course2",
                 StartDate = DateTime.Now,
                 EndDate = DateTime.Now,
@@ -217,6 +231,13 @@ namespace WGU_Student_Mobile_App.Services
                 Email = "test@test.com",
                 Password = "test",
             });
+
+            db.Insert(new User
+            {
+                Username = "test2",
+                Email = "test2@test.com",
+                Password = "test2",
+            });
         }
 
         private const string DropTermTables = @"DROP TABLE IF EXISTS Term;";
@@ -227,11 +248,11 @@ namespace WGU_Student_Mobile_App.Services
         private const string DropUserTables = @"DROP TABLE IF EXISTS User;";
 
 
-        private const string CreateTermTable = @"CREATE TABLE IF NOT EXISTS Term (Id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, StartDate DATETIME, EndDate DATETIME, HasNotified INTEGER)";
-        private const string CreateInstructorTable = @"CREATE TABLE IF NOT EXISTS Instructor (Id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, PhoneNumber TEXT, Email TEXT)";
-        private const string CreateCourseTable = @"CREATE TABLE IF NOT EXISTS Course (Id INTEGER PRIMARY KEY AUTOINCREMENT, TermId INTEGER, InstructorId INTEGER, Name TEXT, StartDate DATETIME, EndDate DATETIME, CourseStatus INTEGER, HasNotified INTEGER)";
-        private const string CreateAssessmentTable = @"CREATE TABLE IF NOT EXISTS Assessment (Id INTEGER PRIMARY KEY AUTOINCREMENT, CourseId INTEGER, Name TEXT, StartDate DATETIME, EndDate DATETIME, AssessmentType INTEGER, HasNotified INTEGER)";
-        private const string CreateNoteTable = @"CREATE TABLE IF NOT EXISTS Note (Id INTEGER PRIMARY KEY AUTOINCREMENT, CourseId INTEGER, Name TEXT, Description TEXT, CreatedDate DATETIME)";
-        private const string CreateUserTable = @"CREATE TABLE IF NOT EXISTS User (Id INTEGER PRIMARY KEY AUTOINCREMENT, Username TEXT, Email TEXT, Password TEXT)";
+        private const string CreateTermTable = @"CREATE TABLE IF NOT EXISTS Term (Id INTEGER PRIMARY KEY AUTOINCREMENT, UserId INTEGER, Name TEXT, StartDate DATETIME, EndDate DATETIME, HasNotified INTEGER)";
+        private const string CreateInstructorTable = @"CREATE TABLE IF NOT EXISTS Instructor (Id INTEGER PRIMARY KEY AUTOINCREMENT, UserId INTEGER, Name TEXT, PhoneNumber TEXT, Email TEXT)";
+        private const string CreateCourseTable = @"CREATE TABLE IF NOT EXISTS Course (Id INTEGER PRIMARY KEY AUTOINCREMENT, UserId INTEGER, TermId INTEGER, InstructorId INTEGER, Name TEXT, StartDate DATETIME, EndDate DATETIME, CourseStatus INTEGER, HasNotified INTEGER)";
+        private const string CreateAssessmentTable = @"CREATE TABLE IF NOT EXISTS Assessment (Id INTEGER PRIMARY KEY AUTOINCREMENT, UserId INTEGER, CourseId INTEGER, Name TEXT, StartDate DATETIME, EndDate DATETIME, AssessmentType INTEGER, HasNotified INTEGER)";
+        private const string CreateNoteTable = @"CREATE TABLE IF NOT EXISTS Note (Id INTEGER PRIMARY KEY AUTOINCREMENT, UserId INTEGER, CourseId INTEGER, Name TEXT, Description TEXT, CreatedDate DATETIME)";
+        private const string CreateUserTable = @"CREATE TABLE IF NOT EXISTS User (Id INTEGER PRIMARY KEY AUTOINCREMENT, UserId INTEGER, Username TEXT UNIQUE, Email TEXT, Password TEXT)";
     }
 }

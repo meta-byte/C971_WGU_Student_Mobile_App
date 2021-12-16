@@ -21,6 +21,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             Course course = new Course
             {
+                UserId = DependencyService.Get<ILoggedInService>().Get(),
                 TermId = termId,
                 Name = name,
                 StartDate = startDate,
@@ -47,26 +48,29 @@ namespace WGU_Student_Mobile_App.Services
 
         public List<Course> GetCourses()
         {
-            return db.Table<Course>().ToList();
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            return db.Table<Course>().Where(a => a.UserId == userId).ToList();
         }
 
         public Course GetCourse(int id)
         {
+            int userId = DependencyService.Get<ILoggedInService>().Get();
             var course = db.Table<Course>()
-                .FirstOrDefault(c => c.Id == id);
+                .FirstOrDefault(c => c.Id == id && c.UserId == userId);
 
             return course;
         }
 
         public CourseDetailsModel GetCourseDetails(int id)
         {
-            SQLiteCommand cmd = db.CreateCommand(GetCourseDetailsQuery, id);
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            SQLiteCommand cmd = db.CreateCommand(GetCourseDetailsQuery, id, userId);
             foreach (CourseDetailsModel cd in cmd.ExecuteQuery<CourseDetailsModel>())
             {
-                SQLiteCommand assCmd = db.CreateCommand(GetAssessmentsByCourseID, id);
+                SQLiteCommand assCmd = db.CreateCommand(GetAssessmentsByCourseID, id, userId);
                 cd.Assessments = assCmd.ExecuteQuery<Assessment>();
 
-                SQLiteCommand notesCmd = db.CreateCommand(GetNotesByCourseID, id);
+                SQLiteCommand notesCmd = db.CreateCommand(GetNotesByCourseID, id, userId);
                 cd.Notes = notesCmd.ExecuteQuery<Note>();
 
                 return cd;
@@ -74,9 +78,9 @@ namespace WGU_Student_Mobile_App.Services
             return null;
         }
 
-        private const string GetAssessmentsByCourseID = @"SELECT * FROM Assessment where CourseId=?;";
-        private const string GetNotesByCourseID = @"SELECT * FROM Note where CourseId=?;";
-        private const string UpdateCourse = "UPDATE Course SET Name=?, TermId=?, InstructorId=?, StartDate=?, EndDate=?, CourseStatus=?, HasNotified=? WHERE Id=?;";
+        private const string GetAssessmentsByCourseID = @"SELECT * FROM Assessment where CourseId=? AND UserId=?;";
+        private const string GetNotesByCourseID = @"SELECT * FROM Note where CourseId=? AND UserId=?;";
+        private const string UpdateCourse = "UPDATE Course SET Name=?, TermId=?, InstructorId=?, StartDate=?, EndDate=?, CourseStatus=?, HasNotified=? WHERE Id=? AND UserId=?;";
         private const string GetCourseDetailsQuery = @"
     SELECT 
         Course.Id as Id, 
@@ -92,6 +96,6 @@ namespace WGU_Student_Mobile_App.Services
         ON Course.TermId=Term.Id
     JOIN Instructor
         ON Course.InstructorId=Instructor.Id
-    WHERE Course.Id=?;";
+    WHERE Course.Id=? AND Course.UserId=?;";
     }
 }

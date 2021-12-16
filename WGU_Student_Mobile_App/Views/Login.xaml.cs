@@ -12,15 +12,5 @@ namespace WGU_Student_Mobile_App.Views
         {
             InitializeComponent();
         }
-
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync($"//{nameof(Terms)}");
-        }
-
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync($"//{nameof(Registration)}");
-        }
     }
 }

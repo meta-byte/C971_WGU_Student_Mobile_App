@@ -21,6 +21,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             Note note = new Note
             {
+                UserId = DependencyService.Get<ILoggedInService>().Get(),
                 CourseId = courseId,
                 Name = name,
                 Description = description,
@@ -43,20 +44,23 @@ namespace WGU_Student_Mobile_App.Services
 
         public List<Note> GetNotes()
         {
-            return db.Table<Note>().ToList();
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            return db.Table<Note>().Where(a => a.UserId == userId).ToList();
         }
 
         public Note GetNote(int id)
         {
+            int userId = DependencyService.Get<ILoggedInService>().Get();
             var note = db.Table<Note>()
-                .FirstOrDefault(n => n.Id == id);
+                .FirstOrDefault(n => n.Id == id && n.UserId == userId);
 
             return note;
         }
 
         public NoteDetailsModel GetNoteDetails(int id)
         {
-            SQLiteCommand cmd = db.CreateCommand(GetNoteDetailsQuery, id);
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            SQLiteCommand cmd = db.CreateCommand(GetNoteDetailsQuery, id, userId);
             foreach (NoteDetailsModel nd in cmd.ExecuteQuery<NoteDetailsModel>())
             {
                 return nd;
@@ -77,7 +81,7 @@ namespace WGU_Student_Mobile_App.Services
     Note 
     JOIN Course 
         ON Note.CourseId=Course.Id
-    WHERE Note.Id=?;";
+    WHERE Note.Id=? AND UserId=?;";
     }
 
 }

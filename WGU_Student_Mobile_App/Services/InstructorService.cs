@@ -20,6 +20,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             Instructor instructor = new Instructor
             {
+                UserId = DependencyService.Get<ILoggedInService>().Get(),
                 Name = name,
                 PhoneNumber = phoneNumber,
                 Email = email
@@ -41,7 +42,8 @@ namespace WGU_Student_Mobile_App.Services
 
         public List<Instructor> GetInstructors()
         {
-            return db.Table<Instructor>().ToList();
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            return db.Table<Instructor>().Where(i => i.UserId == userId).ToList();
         }
 
         public Instructor GetInstructor(int id)

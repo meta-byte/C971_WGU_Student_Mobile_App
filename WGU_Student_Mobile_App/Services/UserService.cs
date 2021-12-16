@@ -32,11 +32,13 @@ namespace WGU_Student_Mobile_App.Services
         public int SignIn(string username, string password)
         {
             SQLiteCommand cmd = db.CreateCommand(GetLoggedInQuery, username, password);
-            foreach (int id in cmd.ExecuteQuery<int>())
+            foreach (User u in cmd.ExecuteQuery<User>())
             {
-                return id;
+                DependencyService.Get<ILoggedInService>().Set(u.Id);
+                return u.Id;
             }
-            return 0;
+
+            return -1;
         }
 
         private const string GetLoggedInQuery = "SELECT Id FROM User WHERE Username=? AND Password=?;";

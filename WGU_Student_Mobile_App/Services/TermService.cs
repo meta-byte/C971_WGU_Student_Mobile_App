@@ -22,6 +22,7 @@ namespace WGU_Student_Mobile_App.Services
         {
             Term term = new Term
             {
+                UserId = DependencyService.Get<ILoggedInService>().Get(),
                 Name = name,
                 StartDate = startDate,
                 EndDate = endDate,
@@ -45,23 +46,26 @@ namespace WGU_Student_Mobile_App.Services
 
         public List<Term> GetTerms()
         {
-            return db.Table<Term>().ToList();
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            return db.Table<Term>().Where(a => a.UserId == userId).ToList();
         }
 
         public Term GetTerm(int id)
         {
+            int userId = DependencyService.Get<ILoggedInService>().Get();
             var term = db.Table<Term>()
-                .FirstOrDefault(t => t.Id == id);
+                .FirstOrDefault(t => t.Id == id && t.UserId == userId);
 
             return term;
         }
 
         public TermDetailsModel GetTermDetails(int id)
         {
-            SQLiteCommand cmd = db.CreateCommand(GetTermDetailsQuery, id);
+            int userId = DependencyService.Get<ILoggedInService>().Get();
+            SQLiteCommand cmd = db.CreateCommand(GetTermDetailsQuery, id, userId);
             foreach (TermDetailsModel td in cmd.ExecuteQuery<TermDetailsModel>())
             {
-                SQLiteCommand crsCmd = db.CreateCommand(GetCoursesByTermId, id);
+                SQLiteCommand crsCmd = db.CreateCommand(GetCoursesByTermId, id, userId);
                 td.Courses = crsCmd.ExecuteQuery<Course>();
 
                 return td;
@@ -69,8 +73,8 @@ namespace WGU_Student_Mobile_App.Services
             return null;
         }
 
-        private const string GetTermDetailsQuery = @"SELECT * FROM Term where Id=?;";
-        private const string GetCoursesByTermId = @"SELECT * FROM Course where TermId=?;";
+        private const string GetTermDetailsQuery = @"SELECT * FROM Term where Id=? AND UserId=?;";
+        private const string GetCoursesByTermId = @"SELECT * FROM Course where TermId=? AND UserId=?;";
 
         private const string UpdateTerm = @"UPDATE Term SET Name=?, StartDate=?, EndDate=?, HasNotified=? WHERE Id=?;";
 

@@ -9,54 +9,37 @@ using System.Collections.ObjectModel;
 using WGU_Student_Mobile_App.Models;
 using WGU_Student_Mobile_App.Views;
 
+
 namespace WGU_Student_Mobile_App.ViewModels
 {
-    class SignInViewModel : BaseViewModel
+    class RegisterViewModel : BaseViewModel
     {
         string username;
         string password;
+        string email;
+        string confirmPassword;
 
         public string Username { get => username; set => SetProperty(ref username, value); }
         public string Password { get => password; set => SetProperty(ref password, value); }
-
+        public string Email { get => email; set => SetProperty(ref email, value); }
+        public string ConfirmPassword { get => confirmPassword; set => SetProperty(ref confirmPassword, value); }
 
         IUserService userService;
 
-        public AsyncCommand LoginCommand { get; }
         public AsyncCommand RegisterCommand { get; }
 
-        public SignInViewModel()
+        public RegisterViewModel()
         {
             Title = "Sign In";
-            LoginCommand = new AsyncCommand(Login);
+
             RegisterCommand = new AsyncCommand(Register);
 
             userService = DependencyService.Get<IUserService>();
         }
 
-        async Task Login()
-        {
-
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
-            {
-                return;
-            }
-
-            int userId = userService.SignIn(username, password);
-
-
-            if (userId == -1)
-            {
-                await Application.Current.MainPage.DisplayAlert("Invalid Login", "Login Attempt Failed", "OK");
-                return;
-            }
-
-            await Shell.Current.GoToAsync($"//{nameof(Terms)}");
-        }
-
         async Task Register()
         {
-            await Shell.Current.GoToAsync($"//{nameof(Registration)}");
+            await Shell.Current.GoToAsync($"//{nameof(Login)}");
         }
     }
 }

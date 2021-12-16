@@ -18,6 +18,8 @@ namespace WGU_Student_Mobile_App.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
+        public int UserId { get; set; }
+
         public int TermId { get; set; }
 
         public int InstructorId { get; set; }

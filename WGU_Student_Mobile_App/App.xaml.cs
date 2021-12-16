@@ -11,11 +11,7 @@ namespace WGU_Student_Mobile_App
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
-        }
 
-        protected override void OnStart()
-        {
             SQLiteConnection db = new DatabaseService().InitializeDatabase();
             DependencyService.RegisterSingleton<IUserService>(new UserService(db));
             DependencyService.RegisterSingleton<ICourseService>(new CourseService(db));
@@ -27,7 +23,12 @@ namespace WGU_Student_Mobile_App
             NotificationService notification = new NotificationService();
             Task.Run(notification.Notify);
 
-            //System.Environment.Exit(0);
+            MainPage = new AppShell();
+        }
+
+        protected override void OnStart()
+        {
+
         }
 
         protected override void OnSleep()

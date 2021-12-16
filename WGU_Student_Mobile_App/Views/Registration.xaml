@@ -2,11 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WGU_Student_Mobile_App.Views.Registration"
-              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Shell.FlyoutBehavior="Disabled"
-             Shell.NavBarIsVisible="False">
-             
-                
+             Shell.NavBarIsVisible="False"
+             xmlns:viewmodels="clr-namespace:WGU_Student_Mobile_App.ViewModels" 
+             x:DataType="viewmodels:RegisterViewModel"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             >
+    
+    <ContentPage.BindingContext>
+        <viewmodels:RegisterViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior/>
+    </ContentPage.Behaviors>
+
     <ContentPage.Content>
         <Frame BackgroundColor="{StaticResource Primary}"
                BorderColor="#002f51"
@@ -29,12 +39,14 @@
                 <Entry 
                     Placeholder="Username"
                     Style="{StaticResource Entry}"
+                    Text="{Binding Username}"
                     >
                 </Entry>
 
                 <Entry 
                     Placeholder="Email"
                     Style="{StaticResource Entry}"
+                    Text="{Binding Email}"
                     >
                     <Entry.Behaviors>
                         <xct:EmailValidationBehavior InvalidStyle="{StaticResource InvalidStyle}"/>
@@ -45,18 +57,21 @@
                     IsPassword="True"
                     Placeholder="Password"
                     Style="{StaticResource Entry}"
+                    Text="{Binding Password}"
                     />
 
                 <Entry
                     Placeholder="Confirm Password"
                     Style="{StaticResource Entry}"
+                    Text="{Binding ConfirmPassword}"
                     />
 
                 <Button 
                     CornerRadius="15"
                     WidthRequest="150"
                     Margin="20"
-                    Text="Sign Up" Clicked="Button_Clicked"
+                    Text="Sign Up"
+                    Command="{Binding RegisterCommand}"
                     VerticalOptions="EndAndExpand"
                     HorizontalOptions="CenterAndExpand"/>
 
