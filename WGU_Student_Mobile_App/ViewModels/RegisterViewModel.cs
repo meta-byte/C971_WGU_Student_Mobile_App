@@ -39,6 +39,20 @@ namespace WGU_Student_Mobile_App.ViewModels
 
         async Task Register()
         {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrEmpty(confirmPassword) || string.IsNullOrWhiteSpace(email))
+            {
+                await Application.Current.MainPage.DisplayAlert("Empty Fields", "All fields are required.", "OK");
+                return;
+            }
+
+            if (confirmPassword != password)
+            {
+                await Application.Current.MainPage.DisplayAlert("Password Mismatch", "Passwords do not match.", "OK");
+                return;
+            }
+
+            userService.AddUser(username, email, password);
+
             await Shell.Current.GoToAsync($"//{nameof(Login)}");
         }
     }
