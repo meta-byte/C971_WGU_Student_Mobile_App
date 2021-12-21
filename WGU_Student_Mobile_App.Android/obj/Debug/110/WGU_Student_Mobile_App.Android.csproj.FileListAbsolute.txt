@@ -679,7 +679,3 @@ C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Andr
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\655cd030-644e-4642-a571-8c3b6e8c0821.jar
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\e6f68d49-8835-4517-a61a-5f8694488329.cfg
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\build.props
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\adb.props
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\WGU_Student_Mobile_App.Android.csproj.AssemblyReference.cache

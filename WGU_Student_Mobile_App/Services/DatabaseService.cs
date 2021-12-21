@@ -42,7 +42,6 @@ namespace WGU_Student_Mobile_App.Services
             {
                 Console.WriteLine("Unable to initialize the database" + ex);
                 return db;
-                Environment.Exit(0);
             }
         }
 
