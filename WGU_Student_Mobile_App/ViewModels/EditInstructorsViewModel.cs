@@ -55,7 +55,7 @@ namespace WGU_Student_Mobile_App.ViewModels
 
         async Task Save()
         {
-            if (string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(email))
             {
                 return;
             }

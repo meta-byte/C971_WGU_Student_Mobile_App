@@ -39,6 +39,7 @@ namespace WGU_Student_Mobile_App.ViewModels
 
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
+                await Application.Current.MainPage.DisplayAlert("Empty Fields", "All fields are required", "OK");
                 return;
             }
 
@@ -47,7 +48,7 @@ namespace WGU_Student_Mobile_App.ViewModels
 
             if (userId == -1)
             {
-                await Application.Current.MainPage.DisplayAlert("Invalid Login", "Login Attempt Failed", "OK");
+                await Application.Current.MainPage.DisplayAlert("Invalid Login", "Login attempt failed", "OK");
                 return;
             }
 

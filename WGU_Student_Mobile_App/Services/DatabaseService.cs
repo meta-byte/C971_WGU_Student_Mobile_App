@@ -18,25 +18,32 @@ namespace WGU_Student_Mobile_App.Services
 
         public SQLiteConnection InitializeDatabase()
         {
-            
-            string databasePath = Path.Combine(FileSystem.AppDataDirectory, "MyData.db");
-            bool createDbFile = !File.Exists(databasePath);
-            if (createDbFile)
+            try
             {
-                File.Create(databasePath).Dispose();
+                string databasePath = Path.Combine(FileSystem.AppDataDirectory, "MyData.db");
+                bool createDbFile = !File.Exists(databasePath);
+                if (createDbFile)
+                {
+                    File.Create(databasePath).Dispose();
+                }
+                db = new SQLiteConnection(databasePath);
+
+                if (createDbFile)
+                {
+                    DropAllTables();
+                    CreateAllTables();
+                    PopulateAllTables();
+                }
+
+                return db;
+
             }
-
-            db = new SQLiteConnection(databasePath);
-
-
-            if (createDbFile)
+            catch (Exception ex)
             {
-                DropAllTables();
-                CreateAllTables();
-                PopulateAllTables();
+                Console.WriteLine("Unable to initialize the database" + ex);
+                return db;
+                Environment.Exit(0);
             }
-
-            return db;
         }
 
         public void DropAllTables()

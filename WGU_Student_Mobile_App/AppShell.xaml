@@ -90,9 +90,7 @@
         <ShellContent Route="Home" ContentTemplate="{DataTemplate local:Home}"/>
     </FlyoutItem>
     
-    <FlyoutItem Title="Search" >
-        <ShellContent Route="Search" ContentTemplate="{DataTemplate local:Search}"/>
-    </FlyoutItem>
+
 
     <!--
     Terms
@@ -194,4 +192,24 @@
         <ShellContent  Route="EditInstructor" ContentTemplate="{DataTemplate local:EditInstructor}"/>
     </ShellItem>
 
+
+    <MenuItem>
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <Label HeightRequest="1" BackgroundColor="LightGray"></Label>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+
+    <!--
+    Search and Reports
+    -->
+
+    <FlyoutItem Title="Search" >
+        <ShellContent Route="Search" ContentTemplate="{DataTemplate local:Search}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Reports" >
+        <ShellContent Route="Reports" ContentTemplate="{DataTemplate local:Reports}"/>
+    </FlyoutItem>
 </Shell>

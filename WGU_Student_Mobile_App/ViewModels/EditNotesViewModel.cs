@@ -82,8 +82,9 @@ namespace WGU_Student_Mobile_App.ViewModels
 
         async Task Save()
         {
-            if (string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(description))
             {
+                await Application.Current.MainPage.DisplayAlert("Empty Fields", "All fields are required", "OK");
                 return;
             }
 

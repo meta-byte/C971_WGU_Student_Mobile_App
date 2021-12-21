@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WGU_Student_Mobile_App.Views.Reports"
+             xmlns:model="clr-namespace:WGU_Student_Mobile_App.Models"
+             xmlns:viewmodels="clr-namespace:WGU_Student_Mobile_App.ViewModels" 
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:DataType="viewmodels:ReportsViewModel"
+             >
+
+    <ContentPage.BindingContext>
+        <viewmodels:ReportsViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior/>
+    </ContentPage.Behaviors>
+
+    <ContentPage.Content>
+
+        <Frame BackgroundColor="{StaticResource Primary}"
+               BorderColor="#002f51"
+               CornerRadius="15"
+               HasShadow="True"
+               Margin="20,150"
+               >
+            <StackLayout>
+                <Picker
+                    VerticalOptions="EndAndExpand"
+                    Style="{StaticResource Entry}"
+                    Title="Select Course"
+                    SelectedItem="{Binding ReportType}">
+
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Planner Overview</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button 
+                    CornerRadius="15"
+                    WidthRequest="150"
+                    Margin="20"
+                    Text="Generate"
+                    Command="{Binding GenerateCommand}"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+
+        </Frame>
+    </ContentPage.Content>
+
+</ContentPage>

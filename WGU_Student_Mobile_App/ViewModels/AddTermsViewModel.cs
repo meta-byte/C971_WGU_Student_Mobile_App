@@ -35,6 +35,7 @@ namespace WGU_Student_Mobile_App.ViewModels
         {
             if (string.IsNullOrWhiteSpace(name))
             {
+                await Application.Current.MainPage.DisplayAlert("Empty Fields", "All fields are required", "OK");
                 return;
             }
 
