@@ -21,6 +21,7 @@
                 <SearchBar
                 Grid.Row="0"
                 Grid.Column="0"
+                Placeholder="Course Search"
                 Text="{Binding SearchInput}"
                 />
 
@@ -28,9 +29,9 @@
                     Grid.Row="0"
                     Grid.Column="1"
                     CornerRadius="15"
-                    WidthRequest="150"
-                    Margin="20"
-                    Text="Save"
+                    WidthRequest="100"
+                    Margin="10"
+                    Text="Search"
                     Command="{Binding SearchCommand}"
                     IsEnabled="{Binding IsNotBusy}"
                     VerticalOptions="EndAndExpand"

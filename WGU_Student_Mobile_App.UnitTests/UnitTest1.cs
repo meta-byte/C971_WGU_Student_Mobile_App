@@ -72,7 +72,7 @@ namespace WGU_Student_Mobile_App.UnitTests
             };
             int Id = db.Insert(term);
 
-            Term termEdit = new Term
+            Term expectedTerm = new Term
             {
                 UserId = 1,
                 Name = "Edit1",
@@ -82,13 +82,13 @@ namespace WGU_Student_Mobile_App.UnitTests
             };
 
             const string UpdateTerm = @"UPDATE Term SET Name=?, StartDate=?, EndDate=?, HasNotified=? WHERE Id=?;";
-            SQLiteCommand cmd = db.CreateCommand(UpdateTerm, termEdit.Name, termEdit.Name, termEdit.EndDate, termEdit.HasNotified, termEdit.UserId);
+            SQLiteCommand cmd = db.CreateCommand(UpdateTerm, expectedTerm.Name, expectedTerm.Name, expectedTerm.EndDate, expectedTerm.HasNotified, expectedTerm.UserId);
             _ = cmd.ExecuteNonQuery();
 
-            var updatedTerm = db.Table<Term>()
+            var actualTerm = db.Table<Term>()
                 .FirstOrDefault(t => t.Id == 1 && t.UserId == 1);
 
-            Assert.AreEqual(updatedTerm.ToString(), termEdit.ToString());
+            Assert.AreEqual(actualTerm.ToString(), expectedTerm.ToString());
             db.Close();
         }
 

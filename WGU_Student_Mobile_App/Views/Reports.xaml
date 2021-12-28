@@ -22,13 +22,23 @@
                BorderColor="#002f51"
                CornerRadius="15"
                HasShadow="True"
-               Margin="20,150"
+               Margin="20,200"
                >
             <StackLayout>
+                <Label
+                    Text="Reports"
+                    Style="{StaticResource SectionLabel}"
+                    TextColor="White"
+                    FontSize="35"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                
                 <Picker
                     VerticalOptions="EndAndExpand"
                     Style="{StaticResource Entry}"
-                    Title="Select Course"
+                    Title="Select Report To Generate"
                     SelectedItem="{Binding ReportType}">
 
                     <Picker.ItemsSource>

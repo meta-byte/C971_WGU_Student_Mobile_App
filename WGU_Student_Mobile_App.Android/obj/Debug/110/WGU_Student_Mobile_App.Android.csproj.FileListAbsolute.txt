@@ -679,10 +679,6 @@ C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Andr
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\655cd030-644e-4642-a571-8c3b6e8c0821.jar
 C:\Users\Garrett\source\repos\WGU_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\e6f68d49-8835-4517-a61a-5f8694488329.cfg
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\build.props
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\adb.props
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\WGU_Student_Mobile_App.Android.csproj.AssemblyReference.cache
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\WGU_Student_Mobile_App.Android.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\WGU_Student_Mobile_App.Android.pdb
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\com.companyname.wgu_student_mobile_app.apk
@@ -692,6 +688,10 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\com.companyname.wgu_student_mobile_app-Signed.apk.idsig
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\WGU_Student_Mobile_App.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\bin\Debug\WGU_Student_Mobile_App.pdb
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\build.props
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\adb.props
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\WGU_Student_Mobile_App.Android.csproj.AssemblyReference.cache
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\res.flag
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_AndroidXJetifyEmbeddedFiles.stamp
@@ -755,7 +755,6 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\FormsViewGroup.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\FormsViewGroup.pdb
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Java.Interop.dll
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Microsoft.Data.Sqlite.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Mono.Android.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Mono.Android.pdb
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Mono.Security.dll
@@ -933,9 +932,9 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Xamarin.Google.Android.Material.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Xamarin.Google.Android.Material.pdb
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Xamarin.Google.Guava.ListenableFuture.dll
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\4ffb4ffc-8295-4f07-87bc-b5b58e7a558f.jar
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\66890e59-a815-4b64-903a-8221b8ba9bd5.jar
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_AndroidXJetifyJavaLibraryRules.stamp
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\1caf3053-5a15-4924-bedf-f85e1020b3e1.cfg
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\f0fcfad6-44cd-4f52-a629-1a3c8f3f5dce.cfg
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_AndroidXJetifyProguardRules.stamp
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\_AndroidXJetifyProguardRules.jetify
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_AndroidXCecilfy.stamp

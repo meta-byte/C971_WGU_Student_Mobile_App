@@ -38,7 +38,6 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\bin\Debug\netstandard2.0\WGU_Student_Mobile_App.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\bin\Debug\netstandard2.0\ref\WGU_Student_Mobile_App.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\bin\Debug\netstandard2.0\WGU_Student_Mobile_App.pdb
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\WGU_Student_Mobile_App.csproj.AssemblyReference.cache
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\WGU_Student_Mobile_App.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
