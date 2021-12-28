@@ -755,6 +755,7 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\FormsViewGroup.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\FormsViewGroup.pdb
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Java.Interop.dll
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Microsoft.Data.Sqlite.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Mono.Android.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Mono.Android.pdb
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Mono.Security.dll
@@ -932,9 +933,9 @@ C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobil
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Xamarin.Google.Android.Material.dll
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Xamarin.Google.Android.Material.pdb
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\android\assets\Xamarin.Google.Guava.ListenableFuture.dll
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\3d930309-e7e9-4a51-9aa2-f080cda38c90.jar
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\jl\4ffb4ffc-8295-4f07-87bc-b5b58e7a558f.jar
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_AndroidXJetifyJavaLibraryRules.stamp
-C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\5fe78b3a-223f-4b83-8fbb-0056315b6731.cfg
+C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\proguard\1caf3053-5a15-4924-bedf-f85e1020b3e1.cfg
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_AndroidXJetifyProguardRules.stamp
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\androidx\_AndroidXJetifyProguardRules.jetify
 C:\Users\Garrett\source\repos\Andrew_Howard_Student_Mobile_App\WGU_Student_Mobile_App.Android\obj\Debug\110\stamp\_AndroidXCecilfy.stamp

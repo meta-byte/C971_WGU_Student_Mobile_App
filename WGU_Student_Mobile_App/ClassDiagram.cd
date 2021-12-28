@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical">
+  <Class Name="WGU_Student_Mobile_App.Models.Assessment">
+    <Position X="14.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGABAAAAAAAAAAAAAAAAwgAAAAAAAgAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Assessment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.AssessmentDetailsModel">
+    <Position X="21.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAAAAAAAAAAQgAAAAAAAgAAAAAEAAAAA=</HashCode>
+      <FileName>Models\AssessmentDetailsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.Course">
+    <Position X="37" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAAAAAgAAAwiACAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.CourseDetailsModel">
+    <Position X="1" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAABAAAgAAAQhAAAAAIAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\CourseDetailsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.Instructor">
+    <Position X="23.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAQAwAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Instructor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.Note">
+    <Position X="3.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAgAAAAAAAAAAwAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Note.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.NoteDetailsModel">
+    <Position X="7.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAgAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\NoteDetailsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.Term">
+    <Position X="25.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAAAAAAAAAwgAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Term.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.TermDetailsModel">
+    <Position X="30.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAFAAAAA=</HashCode>
+      <FileName>Models\TermDetailsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Models.User">
+    <Position X="5.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.AssessmentService" BaseTypeListCollapsed="true">
+    <Position X="32.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAACAQQAAAAAEAAAAAgAAABAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Services\AssessmentService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.CourseService" BaseTypeListCollapsed="true">
+    <Position X="10" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAAAAQAAAAAIAABAAQABACADAAAAAAIAAAAIA=</HashCode>
+      <FileName>Services\CourseService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.DatabaseService">
+    <Position X="16.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAABAAEQQAIQAAAAAKYBAIAAABAAAAEgEQAJAAEA=</HashCode>
+      <FileName>Services\DatabaseService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.InstructorService" BaseTypeListCollapsed="true">
+    <Position X="34.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAQAAAAAAAAAAAAUAAAAEAAAAAgAAQAAAA=</HashCode>
+      <FileName>Services\InstructorService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.LoggedInService" BaseTypeListCollapsed="true">
+    <Position X="39.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABABAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Services\LoggedInService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.NoteService" BaseTypeListCollapsed="true">
+    <Position X="19" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAQQAAAAAAAAAEEEAAAAgQAAAAAAAAIAAA=</HashCode>
+      <FileName>Services\NoteService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.NotificationService">
+    <Position X="28" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAgAAAAABACAAAAAAAAAA=</HashCode>
+      <FileName>Services\NotificationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.TermService" BaseTypeListCollapsed="true">
+    <Position X="41.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAABAASAAwAAAAAAgAAAAAMAAQAAAA=</HashCode>
+      <FileName>Services\TermService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Services.UserService" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAQAAAAAAAAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.AddAssessmentsViewModel">
+    <Position X="0.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAEAIAAAAAAAAAAACAAIAQwgCAEAAAgGAAAAEBEBAA=</HashCode>
+      <FileName>ViewModels\AddAssessmentsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.AddCoursesViewModel">
+    <Position X="7.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAIAEAAAAAAAEACAICAQiACAEAgCgGAAAAkBEAAA=</HashCode>
+      <FileName>ViewModels\AddCoursesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.AddInstructorsViewModel">
+    <Position X="9.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAAAAgAAAAAAQAAAAEAAAgAAAAIgAEAAA=</HashCode>
+      <FileName>ViewModels\AddInstructorsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.AddNotesViewModel">
+    <Position X="21" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAIAAAAAgAAAAIAAAIAQQAAAEAAAACgAAAAJEBAA=</HashCode>
+      <FileName>ViewModels\AddNotesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.AddTermsViewModel">
+    <Position X="30" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAIAAAAAAAAAAACAIAAQgAAAEAAAAEAAAAEAEAAA=</HashCode>
+      <FileName>ViewModels\AddTermsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.SelectedAssessment">
+    <Position X="59.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AssessmentsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.AssessmentsViewModel">
+    <Position X="23.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAIAAABBQAECgAAAAAAQgAEAAAACAgAAAAAAAAI=</HashCode>
+      <FileName>ViewModels\AssessmentsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.SelectedCourse">
+    <Position X="61.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CoursesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.CoursesViewModel">
+    <Position X="3" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMAAACgAABBwAECgAgAIAAYAAEAAAACCgAAAAAgAAI=</HashCode>
+      <FileName>ViewModels\CoursesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.EditAssessmentsViewModel">
+    <Position X="12" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAEgIAAAAAAAAAAICAAIAQwhCAEAAAgGAAAAEAEBgA=</HashCode>
+      <FileName>ViewModels\EditAssessmentsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.EditCoursesViewModel">
+    <Position X="25.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQEgIAEAAAAAABEACAICAQiBCAEAgCgGAAAAkAEAgA=</HashCode>
+      <FileName>ViewModels\EditCoursesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.EditInstructorsViewModel">
+    <Position X="32.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAACAAAAAgAAAAAAQABCAEAAAgAAAAIgAEAgA=</HashCode>
+      <FileName>ViewModels\EditInstructorsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.EditNotesViewModel">
+    <Position X="34.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGgIAAAAAgAAAAIAAAIAQQBCAEAAAACgAAAAIEBgA=</HashCode>
+      <FileName>ViewModels\EditNotesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.EditTermsViewModel">
+    <Position X="36.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgIAAAAAAAAAAACAIAAQiBAAEAAAAEAAAAEAEAgA=</HashCode>
+      <FileName>ViewModels\EditTermsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.SelectedInstructor">
+    <Position X="58" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\InstructorsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.InstructorsViewModel">
+    <Position X="14.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAABBQAECgAAAAAAQAAEAAACCAgAAAgAAAAI=</HashCode>
+      <FileName>ViewModels\InstructorsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.SelectedNote">
+    <Position X="59.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\NotesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.NotesViewModel">
+    <Position X="5.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAABBQAECgAIAAAAQAAEAAAACAgAAAAAAAAI=</HashCode>
+      <FileName>ViewModels\NotesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.RegisterViewModel">
+    <Position X="16.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAACgAQAAAAEAAAABAACCAAAAAgAAIAA=</HashCode>
+      <FileName>ViewModels\RegisterViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.ReportsViewModel">
+    <Position X="27.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAIAAAAAAAAACAACgAAAEEAAAA=</HashCode>
+      <FileName>ViewModels\ReportsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.SignInViewModel">
+    <Position X="18.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAQAAAAEAAAABAACCAAAQAgCAAAA=</HashCode>
+      <FileName>ViewModels\SignInViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.SelectedTerm">
+    <Position X="61.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\TermsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.ViewModels.TermsViewModel">
+    <Position X="39" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAABBQAECgAAICAAQAAEAAAACAgAAAAAAAAI=</HashCode>
+      <FileName>ViewModels\TermsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.AddAssessment">
+    <Position X="1.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AddAssessment.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.AddCourse">
+    <Position X="17.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AddCourse.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.AddInstructor">
+    <Position X="26.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AddInstructor.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.AddNote">
+    <Position X="33" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AddNote.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.AddTerm">
+    <Position X="51" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AddTerm.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.AssessmentDetails">
+    <Position X="28.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AssessmentDetails.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Assessments">
+    <Position X="35.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Assessments.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.CourseDetails">
+    <Position X="8.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Views\CourseDetails.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Courses">
+    <Position X="24" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Courses.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.EditAssessment">
+    <Position X="44.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\EditAssessment.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.EditCourse">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\EditCourse.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.EditInstructor">
+    <Position X="19.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\EditInstructor.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.EditNote">
+    <Position X="30.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\EditNote.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.EditTerm">
+    <Position X="37.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\EditTerm.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Home">
+    <Position X="53.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Home.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.InstructorDetails">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAgCAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\InstructorDetails.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Instructors">
+    <Position X="21.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Instructors.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Login">
+    <Position X="39.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Login.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.NoteDetails">
+    <Position X="55.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAgAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\NoteDetails.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Notes">
+    <Position X="12.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Notes.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Registration">
+    <Position X="42" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Registration.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Reports">
+    <Position X="46.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Reports.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Search">
+    <Position X="6" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Search.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.TermDetails">
+    <Position X="48.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAIAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\TermDetails.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.Views.Terms">
+    <Position X="15" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Terms.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.App">
+    <Position X="15" Y="32.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WGU_Student_Mobile_App.AppShell">
+    <Position X="58" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppShell.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xamarin.Forms.ContentPage">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="MvvmHelpers.BaseViewModel">
+    <Position X="20" Y="15.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Xamarin.Forms.Application">
+    <Position X="15" Y="23.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object">
+    <Position X="21.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="WGU_Student_Mobile_App.Services.IAssessmentService">
+    <Position X="58" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAQAAAAAAEAAAAAgAAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Services\IAssessmentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WGU_Student_Mobile_App.Services.ICourseService">
+    <Position X="59.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAQAAACADAAAAAAIAAAAIA=</HashCode>
+      <FileName>Services\ICourseService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WGU_Student_Mobile_App.Services.IInstructorService">
+    <Position X="61.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAUAAAAAAAAAAgAAQAAAA=</HashCode>
+      <FileName>Services\IInstructorService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WGU_Student_Mobile_App.Services.ILoggedInService">
+    <Position X="58" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ILoggedInService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WGU_Student_Mobile_App.Services.INoteService">
+    <Position X="59.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAQAAAAAAAAAAEEAAAAAQAAAAAAAAIAAA=</HashCode>
+      <FileName>Services\INoteService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WGU_Student_Mobile_App.Services.ITermService">
+    <Position X="61.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAASAAQAAAAAAgAAAAAEAAQAAAA=</HashCode>
+      <FileName>Services\ITermService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WGU_Student_Mobile_App.Services.IUserService">
+    <Position X="58" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="WGU_Student_Mobile_App.Models.AssessmentTypes">
+    <Position X="58" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Assessment.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WGU_Student_Mobile_App.Models.CourseStatuses">
+    <Position X="59.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAABAAIAAAAAAIABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Course.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

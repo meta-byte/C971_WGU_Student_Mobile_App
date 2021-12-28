@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "WGU_Student_Mobile_App.Android.dll" comes first in this list. */
 		"WGU_Student_Mobile_App.Android.dll",
 		"FormsViewGroup.dll",
+		"Microsoft.Data.Sqlite.dll",
 		"MvvmHelpers.dll",
 		"Plugin.LocalNotifications.Abstractions.dll",
 		"Plugin.LocalNotifications.dll",
